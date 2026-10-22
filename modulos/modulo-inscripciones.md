@@ -22,6 +22,7 @@ El Módulo de Inscripciones se encarga de gestionar el proceso de registro y asi
 ## 1. Actores
 * *Alumno:* Consulta materias disponibles, arma su horario preliminar y solicita su inscripción formal.
 * *Administrador / Coordinador:* Abre o cierra los periodos de inscripción, define cupos y valida/ajusta inscripciones cuando sea necesario.
+* *Sistema (automatizado):* Valida que no existan traslapes de horario y actualiza los lugares disponibles.
 
 ## 2. Requerimientos Funcionales (RF)
 * *Consultar oferta académica:* El sistema debe permitir visualizar las materias ofertadas, grupos, docentes asignados y cupos disponibles en tiempo real.
@@ -47,21 +48,25 @@ usecase "Confirmar inscripción" as UC3
 usecase "Validar traslape de horario" as UC4
 usecase "Validar cupo disponible" as UC5
 usecase "Descargar comprobante" as UC6
-usecase "Consultar reporte de inscritos" as UC7
+usecase "Abrir / Cerrar periodo" as UC7
+usecase "Consultar reporte de inscritos" as UC8
 }
 
 alumno --> UC1
 alumno --> UC2
 alumno --> UC3
-alumno --> UC6
-admin --> UC4
-admin --> UC5
-admin --> UC7
 
+UC3 ..> UC4 : <<include>>
+UC3 ..> UC5 : <<include>>
+UC6 ..> UC3 : <<extend>>
+
+
+admin --> UC7
+admin --> UC8
 
 @enduml
 
-
+![Diagrama de Casos de Uso](resources/imgs/m2_inscripciones_casos_uso.png)
 
 ## 7. Referencias
 1. Documentación oficial del lenguaje / framework utilizado.
