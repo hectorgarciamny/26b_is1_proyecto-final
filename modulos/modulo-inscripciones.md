@@ -35,6 +35,7 @@ El Módulo de Inscripciones se encarga de gestionar el proceso de registro y asi
 
 ## 5. Contenido
 # Diagrama de casos de uso:
+```
 @startuml
 left to right direction
 
@@ -65,6 +66,7 @@ admin --> UC7
 admin --> UC8
 
 @enduml
+```
 
 ![Diagrama de Casos de Uso](resources/imgs/m2_inscripciones_casos_uso.png)
 
