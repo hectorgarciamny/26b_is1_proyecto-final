@@ -1,5 +1,14 @@
 # Módulo 2: Inscripciones
 
+## Información del Equipo
+- **Equipo:** 2
+- **Módulo:** Inscripciones
+- **Integrantes:**
+    - Pamela Concepción Abasolo Díaz
+    - Héctor Jesús García Monroy
+    - Kevin Alejandro Nabor Matias
+    - Santiago Cuevas Sanchez
+  
 ## 1. Resumen
 El Módulo de Inscripciones se encarga de gestionar el proceso de registro y asignación de materias para los alumnos dentro del sistema. Permite validar los requisitos de inscripción, gestionar cupos por grupo y generar los comprobantes o registros correspondientes.
 
@@ -10,21 +19,12 @@ El Módulo de Inscripciones se encarga de gestionar el proceso de registro y asi
   - Selección y validación de asignaturas/horarios.
   - Registro en base de datos y generación de comprobantes.
 
-## 3. Información del Equipo
-- **Equipo:** 2  
-- **Módulo:** Inscripciones  
-- **Integrantes:**
-  - Pamela Concepción Abasolo Díaz
-  - Héctor Jesús García Monroy
-  - Kevin Alejandro Nabor Matias
-  - Santiago Cuevas Sanchez
-
-## 1. Actores
+## 3. Actores
 * *Alumno:* Consulta materias disponibles, arma su horario preliminar y solicita su inscripción formal.
 * *Administrador / Coordinador:* Abre o cierra los periodos de inscripción, define cupos y valida/ajusta inscripciones cuando sea necesario.
 * *Sistema (automatizado):* Valida que no existan traslapes de horario y actualiza los lugares disponibles.
 
-## 2. Requerimientos Funcionales (RF)
+## 4. Requerimientos Funcionales (RF)
 * *Consultar oferta académica:* El sistema debe permitir visualizar las materias ofertadas, grupos, docentes asignados y cupos disponibles en tiempo real.
 * *Selección de materias:* El sistema debe permitir al alumno agregar o quitar materias a una lista preliminar de inscripción.
 * *Validación de choques de horario:* El sistema debe impedir que el alumno inscriba dos materias que compartan el mismo bloque de horario y día.
@@ -34,7 +34,7 @@ El Módulo de Inscripciones se encarga de gestionar el proceso de registro y asi
 * *Generación de horario/comprobante:* El sistema debe generar una vista resumen imprimible o descargable con el horario final del alumno inscrito.
 
 ## 5. Contenido
-# Diagrama de casos de uso:
+# 5.1 Diagrama de casos de uso:
 ```
 @startuml
 left to right direction
@@ -70,15 +70,12 @@ admin --> UC8
 
 ![Diagrama de Casos de Uso](resources/imgs/m2_inscripciones_casos_uso.png)
 
-## 7. Referencias
-1. Documentación oficial del lenguaje / framework utilizado.
-2. Manual de arquitectura de base de datos del proyecto final.
 
-## 8. Abreviaciones
+## 6. Abreviaciones
 - **BD:** Base de Datos.
 - **UI:** Interfaz de Usuario (*User Interface*).
 
-## 9. Requerimientos No Funcionales (RNF)
+## 7. Requerimientos No Funcionales (RNF)
 * *Usabilidad:* La interfaz debe ser intuitiva, permitiendo completar el proceso de inscripción en no más de 4 pasos guiados.
 * *Rendimiento:* El tiempo de respuesta del sistema para confirmar y guardar la inscripción no debe superar los 2 segundos.
 * *Integridad de datos:* El sistema debe garantizar que dos alumnos no puedan ocupar el último cupo disponible al mismo tiempo (control de concurrencia básico).
